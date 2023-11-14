@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const database = require("./database");
 const menuRoute = require("./routes/menu");
+const cartRoute = require("./routes/cart");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 
@@ -15,6 +16,7 @@ database();
 
 // application routes
 app.use("/menu", menuRoute);
+app.use("/cart", cartRoute);
 
 // Listen server
 app.listen(port, () => console.log(`Server is running in port ${port}!`));

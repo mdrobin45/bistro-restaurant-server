@@ -1,13 +1,12 @@
-const { MenuModel } = require("../../models/menuModel");
+const { models } = require("../../models/models");
 
 const getMenuItemsByCategory = async (req, res) => {
    try {
-      const { category } = req.query;
+      const { name } = req.query;
 
-      const result = await MenuModel.find({ category: category });
+      const result = await models.find({ category: name });
       res.send(result);
-   } catch (err) {
-      console.log(err);
+   } catch {
       res.status(500).json({ message: "There is an internal error" });
    }
 };
