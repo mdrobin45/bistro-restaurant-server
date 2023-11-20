@@ -8,7 +8,7 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 // middlewares
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({ credentials: true, origin: "http://localhost:5174" }));
 app.use(express.json());
 
 // Database connection

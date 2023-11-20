@@ -7,8 +7,7 @@ const getProduct = async (req, res) => {
          "product"
       );
       res.send(result);
-   } catch (err) {
-      console.log(err);
+   } catch {
       res.status(500).json({ message: "There is an internal error" });
    }
 };
